@@ -21,18 +21,13 @@ export class SearchFilterPipe implements PipeTransform {
       filtered = list
     }
     if(!genres) {
-      console.log("sds");
       return filtered;
     } else {
-      console.log("sdds");
-      console.log(genres);
       if(genres.length> 0) {
         filtered = filtered.filter(item => genres.includes(item.genre));
       } else {
         return filtered;
       }
-      console.log(filtered);
-
       return filtered;
     }
 
