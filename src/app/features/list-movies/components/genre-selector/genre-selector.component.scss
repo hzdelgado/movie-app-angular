@@ -1,0 +1,46 @@
+@import "../../../../styles/variables";
+
+.genre-selector {
+  flex: 1;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  width: calc(100vw * 0.94);
+  
+  &__button {
+    height: 2.5rem;
+    border: 1px white solid;
+    border-width: 2px;
+    border-radius: $border-radius-xs;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--bold {
+      width: 100%;
+      font-size: $font-size-sm;
+      font-weight: bold;
+    }
+  }
+
+  .clicked {
+    background-color: white;
+    color: black;
+  }
+
+  @media (min-width: 1200px) {
+    &__button {
+      width: 10rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    width: calc(100vw * 0.4);
+  }
+}

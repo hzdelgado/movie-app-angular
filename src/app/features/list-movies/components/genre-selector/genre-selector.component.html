@@ -1,0 +1,5 @@
+<div class="genre-selector">
+    <button class="genre-selector__button" [ngClass]="genreIds.includes(g) ? 'clicked' : ''" *ngFor="let g of genres" (click)="onGenreClicked(g)">
+        <span class="genre-selector__button--bold">{{g}}</span>
+      </button>
+</div>
