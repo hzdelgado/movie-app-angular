@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Observable, map, pipe } from 'rxjs';
 import { ApiResponse } from '../models/api-response.model';
 import { Movie } from '../models/movie.model';
+import Axios, { AxiosObservable } from 'axios-observable';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,11 @@ export class MovieService {
 
   constructor() { }
 
-  async getAvailableMovies(): Promise<Movie[]> {
-    const res = await axios.get<ApiResponse>('/assets/data/dummy-movies.json');
-    return res.data.movies;
+  getAvailableMovies(): Observable<Movie[]> {
+    return Axios.get<ApiResponse>('/assets/data/dummy-movies.json').pipe(map(e => e.data.movies));
   }
 
-  async getAvailableGenres(): Promise<string[]> {
-    const res = await axios.get<ApiResponse>('/assets/data/dummy-movies.json');
-    return res.data.genres;
+  getAvailableGenres(): Observable<string[]> {
+    return Axios.get<ApiResponse>('/assets/data/dummy-movies.json').pipe(map(e => e.data.genres));
   }
 }

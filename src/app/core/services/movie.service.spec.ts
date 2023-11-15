@@ -12,14 +12,14 @@ describe('MovieServiet', () => {
     });
 
   it('#getValue should return real movies from the real service', (done: DoneFn) => {
-    service.getAvailableMovies().then(value => {
+    service.getAvailableMovies().subscribe(value => {
       expect(value).toEqual(dummyMovies);
       done();
     });
   });
 
   it('#getValue should return real genres from the real service', (done: DoneFn) => {
-    service.getAvailableGenres().then(value => {
+    service.getAvailableGenres().subscribe(value => {
       expect(value).toEqual(dummyGenres);
       done();
     });
