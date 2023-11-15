@@ -14,7 +14,6 @@ export class GenreSelectorComponent {
   genreIds: string[] = [];
   @Output() genresSelected = new EventEmitter<string[]>();
 
-
   constructor(private service: MovieService) {
     this.getGenres();
   }
@@ -25,6 +24,8 @@ export class GenreSelectorComponent {
     } else {
       this.genreIds.splice(this.genreIds.indexOf(value), 1);
     }
+    console.log(this.genreIds);
+    this.genresSelected.emit(this.genreIds);
   }
 
   getGenres() {
