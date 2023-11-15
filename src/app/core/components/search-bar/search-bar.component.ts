@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,5 +12,16 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 })
 export class SearchBarComponent {
   faMagnifyingGlass = faMagnifyingGlass;
+  searchTerm = "";
+  @Output() searchEntered = new EventEmitter<string>();
+
+
+  onSearchPressed() {
+    this.searchEntered.emit(this.searchTerm);
+  }
+
+  onInputChange(e: any) {
+    this.searchTerm = e.target.value;
+  }
 
 }

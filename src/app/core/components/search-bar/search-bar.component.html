@@ -1,8 +1,8 @@
 <div class="search-bar">
     <div class="search-bar__search-input">
         <fa-icon class="search-bar__icon"[icon]="faMagnifyingGlass" aria-hidden="true"></fa-icon>
-        <input class="search-bar__input" placeholder="Buscar peliculas" />
+        <input (keydown.enter)="onSearchPressed()" [value]="searchTerm" (change)="onInputChange($event)" class="search-bar__input" placeholder="Buscar peliculas" />
     </div>
-    <button  class="search-bar__button">Buscar</button>
+    <button  class="search-bar__button" (click)="onSearchPressed()">Buscar</button>
 </div>
 

@@ -10,5 +10,14 @@ import { GenreSelectorComponent } from '../../components/genre-selector/genre-se
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  searchValue: string = "";
+  genresSelected: string[] = [];
 
+  onGenreSelected(genres: string[]) {
+    this.genresSelected = genres;
+  }
+
+  onSearch(value: string) {
+    this.searchValue = value;
+  }
 }
