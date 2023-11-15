@@ -3,3 +3,16 @@
   flex-flow: row wrap;
   background-color: black;
 }
+
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: auto;
+
+  @media (min-width: 600px) {
+    padding-left: 1rem;
+    justify-content: start;
+  }
+}

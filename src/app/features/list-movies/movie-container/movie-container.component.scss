@@ -1,0 +1,61 @@
+.movie-item {
+    border-width: .1rem;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    width: 15rem;
+    height: 20rem;
+
+    &__content {
+        font-family: Roboto, sans-serif !important;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background-color: transparent;
+        &:hover {
+            background-color: white;
+            & span {
+                display: initial;
+            }
+        }
+
+        & span {
+            display: none;
+        }
+    }
+
+    &__col {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    &__poster {
+        object-fit: cover;
+        object-position: right top;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    &__description {
+        text-align: justify;
+        font-weight: 500;
+        font-size: small;
+        align-self: center;
+        width: 90%;
+    }
+
+    &__genre {
+        font-weight: bold;
+        font-size: medium;
+    }
+   
+}

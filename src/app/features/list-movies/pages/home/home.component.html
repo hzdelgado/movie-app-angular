@@ -1,4 +1,7 @@
 <div class="home">
   <app-search-bar (searchEntered)="onSearch($event)"></app-search-bar>
   <app-genre-selector (genresSelected)="onGenreSelected($event)"></app-genre-selector>
+  <div class="movie-list">
+    <app-movie-container *ngFor="let m of movies" [movie]="m"></app-movie-container>
+  </div>
 </div>
