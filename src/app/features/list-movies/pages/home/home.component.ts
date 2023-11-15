@@ -5,11 +5,12 @@ import { MovieService } from 'src/app/core/services/movie.service';
 import { Movie } from 'src/app/core/models/movie.model';
 import { CommonModule } from '@angular/common';
 import { MovieContainerComponent } from '../../movie-container/movie-container.component';
+import { SearchFilterPipe } from 'src/app/shared/search-filter-pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchBarComponent, GenreSelectorComponent, MovieContainerComponent],
+  imports: [CommonModule, SearchBarComponent, GenreSelectorComponent, MovieContainerComponent, SearchFilterPipe],
   providers: [MovieService],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']

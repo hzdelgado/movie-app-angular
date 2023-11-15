@@ -18,4 +18,8 @@ xdescribe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#filterMovies should filter data', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -37,6 +37,12 @@ describe('SearchBarComponent', () => {
     searchTermDe.nativeElement.dispatchEvent(new Event('change'));
     fixture.detectChanges();
 
+    component.searchEntered
+    .pipe(first())
+    .subscribe((val) => {
+      expect(val).toEqual(expectedResult);
+    });
+
     expect(searchTermDe.nativeElement.value).toEqual(expectedResult);
     expect(component.searchTerm).toEqual(expectedResult);
   });

@@ -22,6 +22,7 @@ export class SearchBarComponent {
 
   onInputChange(e: any) {
     this.searchTerm = e.target.value;
+    this.searchEntered.emit(this.searchTerm);
   }
 
 }
