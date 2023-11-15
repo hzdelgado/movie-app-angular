@@ -47,7 +47,7 @@ describe('MovieContainerComponent', () => {
     expect(movieDe.nativeElement.textContent).toEqual(expectedMovie.genre);
   });
 
-  it('should display movie genre', () => {
+  it('should display movie poster', () => {
     movieDe = fixture.debugElement.query(By.css('.movie-item__poster'));
     expect(movieDe.nativeElement.src).toEqual(expectedMovie.poster);
   });
