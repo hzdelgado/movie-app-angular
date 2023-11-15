@@ -4,8 +4,8 @@ Este proyecto es un ejemplo de una aplicación de películas creado con Angular 
 
 ## Clonar el repo
 ```shell
-git clone https://github.com/bryanforbes/intern-angular
-cd intern-angular
+git clone https://github.com/hzdelgado/delfosti-angular
+cd delfost-angular
 ```
 
 ## Instalar paquetes NPM
