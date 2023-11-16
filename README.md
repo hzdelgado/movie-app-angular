@@ -1,4 +1,4 @@
-# Angular-Delfosti
+# App de Peliculas - React Native
 
 Este proyecto es un ejemplo de una aplicación de películas creado con Angular versión 16.1.6. La aplicación permite el filtrado por nombre, descripción y género.
 
