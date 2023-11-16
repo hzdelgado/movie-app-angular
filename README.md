@@ -19,3 +19,8 @@ El comando `npm start` ejecuta la aplicación en el servidor local en el puerto 
 ## Test unitarios 
 
 Ejecuta `ng test` para ejecutar los unit tests via [Karma](https://karma-runner.github.io).
+
+## Captura
+
+<img width="1000" alt="Screenshot 2023-11-15 at 18 05 56" src="https://github.com/hzdelgado/delfosti-angular/assets/88523514/32f2eb5c-41a6-4ba8-b4cd-c9806c85594d">
+
